@@ -7,18 +7,20 @@ route: true
 # ¯\_(ツ)_/¯
 source_secrets:
     # secret used to git clone inside of OpenShift when running s2i and possibly in a Jenkins job too
-  - name: git-auth
-    username: idm-sa
-    password: thisisdefinitelymypassword
+#  - name: git-auth
+#    username: idm-sa
+#    password: thisisdefinitelymypassword
     # some token... appears in jenkins env as JSON ie {"token": "aaaaa.bbbbb.ccccc"}
-  - name: my-token
-    type: Opaque
-    token: aaaaa.bbbbb.ccccc
+#  - name: my-token
+#    type: Opaque
+#    token: aaaaa.bbbbb.ccccc
     # default password for nexus bind for jenkis - this is ovs changed.
     # .... probably
-  - name: nexus-password
-    username: admin
-    password: admin123
+#  - name: nexus-password
+#    username: admin
+#    password: admin123 
+
+sealed_secrets: true
 
 deployment:
   openshiftauth: true
