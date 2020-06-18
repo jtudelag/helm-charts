@@ -33,7 +33,6 @@ helm install my-jenkins -f my-values.yaml rht-labs/jenkins
 
 Before adding a chart to this repo, make sure there is no linting issues, otherwise the PR actions will fail. 
 We use both the integrated [`helm lint`](https://helm.sh/docs/helm/helm_lint/) command and the [`chart testing`](https://github.com/helm/chart-testing/blob/master/doc/ct_lint.md) tool.
-
 ```bash
 helm lint charts/jenkins
 ct lint charts/jenkins
